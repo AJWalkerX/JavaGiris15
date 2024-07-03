@@ -46,5 +46,42 @@ public class Soru04 {
 		else {
 			System.out.println("Hatali giris!");
 		}
+		
+		// Switch case ile
+		System.out.print("Notunuzu giriniz(1-10 arasında): ");
+		not = sc.nextInt();
+		if (not > 10 && not <=100){
+			not = not/10;
+		}
+		switch (not){
+			case 10,9 :
+				System.out.println("Notunuz: AA");
+				break;
+			case 8:
+				System.out.println("Notunuz: BA");
+				break;
+			case 7:
+				System.out.println("Notunuz: BB");
+				break;
+			case 6:
+				System.out.println("Notunuz: CB");
+				break;
+			case 5:
+				System.out.println("Notunuz: CC");
+				break;
+			case 4:
+				System.out.println("Notunuz: DC");
+				break;
+			case 3:
+				System.out.println("Notunuz: DD");
+				break;
+			case 2,1:
+				System.out.println("Notunuz: FF");
+				break;
+			default:
+				System.out.println("Hatali islem!");
+				break;
+			
+		}
 	}
 }

@@ -1,4 +1,4 @@
-package com.ajwalker.string_equals;
+package com.ajwalker.strings;
 
 import java.util.Scanner;
 

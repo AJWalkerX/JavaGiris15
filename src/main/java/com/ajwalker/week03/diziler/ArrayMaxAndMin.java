@@ -1,6 +1,5 @@
 package com.ajwalker.week03.diziler;
 /*
-	!Burayı tamamla
 	Kullanıcıdan dizinin boyutunu belirlemesini sağla.
 	Dizinin değerlerini kullanıcıdan iste.
 	Hangi indexin en buyuk olduğunu bul.

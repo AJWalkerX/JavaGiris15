@@ -7,7 +7,7 @@ public class ForYazimFarki {
 			System.out.println(i);
 		}
 		int j = 0;
-		for (; j <= 10;){
+		for (; j <= 10;){//deneme
 			System.out.println(i);
 			j++;
 		}

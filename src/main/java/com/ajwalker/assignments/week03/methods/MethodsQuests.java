@@ -117,4 +117,24 @@ public class MethodsQuests {
 		}
 		return counter;
 	}
+	// Soru 9: Bir tam sayı dizisi ve bir tamsayı parametre alan ve dizideki her sayıyı, girilen 2. parametredeki
+	//değer ile çarparak yeni bir dizi oluşturan ve geri döndüren bir metod yazınız
+	int[] multiplyArr(int[] numbersArr, int multiplier){
+		int[] multipliedArr = new int[numbersArr.length];
+		int i = 0;
+		for (int number: numbersArr){
+			multipliedArr[i] = number*multiplier;
+			i++;
+		}
+		return multipliedArr;
+	}
+	//Soru 10: Bir metin dizisi ve bir ayırıcı parametre alan ve dizideki tüm kelimeleri ayırıcı ile birleştirerek geri
+	//döndüren bir metod.
+	String mergeArr(String[] textArr, String separator){
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < textArr.length; i++){
+			sb = sb.append(new StringBuilder().append(textArr[i]).append(separator));
+		}
+		return sb.toString().trim();
+	}
 }

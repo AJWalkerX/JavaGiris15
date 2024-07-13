@@ -44,5 +44,10 @@ public class Runner {
 		System.out.println(methods.countNumericLetter("123"));
 		//Soru 8.3: rakam haric harfleri sayan method.
 		System.out.println(methods.countOnlyLetter("1233abc"));
+		//Soru 9: dizilerin değerlerini çarpıp yeni dizi yapan method
+		System.out.println(Arrays.toString(methods.multiplyArr(arr, 2)));
+		//Soru 10: MEtin dizisini String'e cevirme
+		String[] textArr = {"Alex", "Alexander", "Jo.", "Joseph", "Walker"};
+		System.out.println(methods.mergeArr(textArr, ", "));
 	}
 }

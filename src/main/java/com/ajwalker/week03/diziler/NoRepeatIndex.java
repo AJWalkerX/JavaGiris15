@@ -7,38 +7,34 @@ import java.util.Arrays;
 **/
 public class NoRepeatIndex {
 	public static void main(String[] args) {
-		int dizi[] = {20,19,20,40,3,40,5,3,7,3};
-		int dizi2[];
-		int dizi2Uzunluk = dizi.length;
+		int[] repeatNumArr = {20,19,20,40,3,40,5,7,3};
+		int noRepeatArrLength = repeatNumArr.length;
 		
-		for (int i = 0; i < dizi.length; i++) {
-			for (int j = i + 1; j < dizi.length; j++) {
-				if (dizi[i] == dizi[j]) {
-					dizi2Uzunluk--;
+		for (int i = 0; i < repeatNumArr.length; i++){
+			for (int j = i+1; j < repeatNumArr.length; j++){
+				if (repeatNumArr[i] == repeatNumArr[j]){
+					noRepeatArrLength--;
 					break;
 				}
 			}
 		}
-		System.out.println("Temp uzunluk: " + dizi2Uzunluk);
-		dizi2 = new int[dizi2Uzunluk];
-		
-		//Dizi2'ye tekrarsız eleman ekleme
-		boolean esitMi = false;
-		int dizi2Index= 0;
-		for (int i = 0; i < dizi.length; i++) {
-			esitMi = false;
-			for (int j = i + 1; j < dizi.length; j++) {
-				if (dizi[i] == dizi[j]) { //tekrar eden deger varsa
-					System.out.println(dizi[i]);
-					esitMi = true;
+		int noRepeatArr[] = new int[noRepeatArrLength];
+		int counter = 0;
+		boolean isEquals;
+		for (int i = 0; i < repeatNumArr.length; i++){
+			isEquals = false;
+			for (int j = i+1; j < repeatNumArr.length; j++){
+				if (repeatNumArr[i] == repeatNumArr[j]){
+					isEquals = true;
 					break;
 				}
 			}
-			if (!esitMi){
-				dizi2[dizi2Index]=dizi[i]; /* ! Hata */
-				dizi2Index++;
+			if (!isEquals){
+				noRepeatArr[counter]= repeatNumArr[i];
+				counter++;
 			}
 		}
-		System.out.println(Arrays.toString(dizi2));
+		System.out.println(Arrays.toString(noRepeatArr));
 	}
+	
 }
